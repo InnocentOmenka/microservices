@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/department")
+@RequestMapping("api/departments")
 @AllArgsConstructor
 public class DepartmentController {
 

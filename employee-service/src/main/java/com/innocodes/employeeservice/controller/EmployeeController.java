@@ -1,5 +1,6 @@
 package com.innocodes.employeeservice.controller;
 
+import com.innocodes.employeeservice.dto.ApiResponseDto;
 import com.innocodes.employeeservice.dto.EmployeeDto;
 import com.innocodes.employeeservice.service.EmployeeService;
 import lombok.AllArgsConstructor;
@@ -25,8 +26,8 @@ public class EmployeeController {
 
     //Build get Employee REST API
     @GetMapping("{id}")
-    public ResponseEntity<EmployeeDto> getEmployee(@PathVariable("id") Long employeeId){
-        EmployeeDto employeeDto = employeeService.getEmployeeById(employeeId);
-        return new ResponseEntity<>(employeeDto, HttpStatus.OK);
+    public ResponseEntity<ApiResponseDto> getEmployee(@PathVariable("id") Long employeeId){
+        ApiResponseDto apiResponseDto = employeeService.getEmployeeById(employeeId);
+        return new ResponseEntity<>(apiResponseDto, HttpStatus.OK);
     }
 }
